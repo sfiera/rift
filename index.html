@@ -1,0 +1,174 @@
+<html>
+  <head>
+    <title>Flight/Crest</title>
+    <style type="text/css">
+      html, body {
+        margin: 0;
+      }
+      .comparison {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 640px;
+        margin: 0 auto;
+      }
+      .comparison > div:nth-child(odd) {
+        width: 50%;
+        overflow: hidden;
+      }
+      .comparison > div:nth-child(even) {
+        width: 50%;
+        overflow: hidden;
+      }
+      .comparison > div:nth-child(odd) > * {
+        float: left;
+        width: 200%;
+      }
+      .comparison > div:nth-child(even) > * {
+        float: right;
+        width: 200%;
+      }
+      img {
+        width: 100%;
+      }
+      .wiper, .slider {
+        position: fixed;
+        left: 50%;
+        width: 100%;
+        max-width: 640px;
+      }
+      .wiper {
+        top: 0;
+        height: 100%;
+      }
+      .slider {
+        bottom: 0;
+      }
+      .wiper div {
+        position: relative;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: #333;
+      }
+      .slider input {
+        position: relative;
+        width: 100%;
+        left: -50%;
+      }
+    </style>
+    <script type="text/javascript">
+      //<![CDATA[
+        window.addEventListener("DOMContentLoaded", (e) => {
+          document.getElementById("fraction").addEventListener("input", (e) => {
+            var val = parseInt(e.target.value);
+            var wiper = document.querySelector(".wiper div");
+            wiper.style.left = (val - 50) + "%";
+            document.querySelectorAll(".comparison > div:nth-child(odd)").forEach((el) => {
+              el.style.width = val + "%";
+            });
+            document.querySelectorAll(".comparison > div:nth-child(odd) > *").forEach((el) => {
+              el.style.width = (10000 / val) + "%";
+            });
+            document.querySelectorAll(".comparison > div:nth-child(even)").forEach((el) => {
+              el.style.width = (100 - val) + "%";
+            });
+            document.querySelectorAll(".comparison > div:nth-child(even) > *").forEach((el) => {
+              el.style.width = (10000 / (100 - val)) + "%";
+            });
+          });
+        });
+      //]]>
+    </script>
+  </head>
+  <body>
+    <div class="comparison">
+      <div><img src="flight-map.jpeg" alt="Flight map" width="500"/></div>
+      <div><img src="crest-map.jpeg" alt="Crest map" width="500"/></div>
+      <div><h2>A Brief History of Eremur and Surrounding Lands</h2></div>
+      <div><h2>A Brief History of Eremur and Surrounding Lands</h2></div>
+      <div><p></p></div>
+      <div><p>Written by Hanaiko Kirbanehl</p></div>
+      <div><p><strong>–70</strong> The Iyo-jouyen constructs a shrine in Toel Ginu, one of the oldest surviving buildings in the Aikoto Confederacy</p></div>
+      <div><p><strong>–200</strong> The Rin-jouyen constructs a shrine in Aeti Ginu, one of the oldest surviving buildings in the Aikoto Confederacy</p></div>
+      <div><p><strong>–60</strong> Sverbian sailors land on the east coast of the Aikoto’s continent and begin migrating west.</p></div>
+      <div><p><strong>–60</strong> Sverbian sailors land on the east coast of the Aikoto’s continent and begin migrating west.</p></div>
+      <div><p><strong>1</strong> The Sverbian monarchy introduces a new calendar, marking the birth of an empire.</p></div>
+      <div><p><strong>1</strong> The Sverbian monarchy introduces a new calendar, marking the birth of an empire.</p></div>
+      <div><p><strong>428</strong> Sverba founds the province of Nyhemur across the mountains from Aikoto lands. The two groups begin trading.</p></div>
+      <div><p><strong>428</strong> Sverba founds the province of Nyhemur across the mountains from Aikoto lands. The two groups begin trading.</p></div>
+      <div><p><strong>487</strong> Ferish sailors land in Aikoto territory. They clash violently with Aikoto and Sverbians over trade routes and natural resources.</p></div>
+      <div><p><strong>487</strong> Ferish sailors land in Aikoto territory. They clash violently with Aikoto and Sverbians over trade routes and natural resources.</p></div>
+      <div><p></p></div>
+      <div><p><strong>492</strong> Gustos Dévoye, a Ferish naval captain, builds a trading post on an island in Iyo-jouyen territory. He names the island Ile vi Dévoye. The post fails to last the winter.</p></div>
+      <div><p><strong>513</strong> Barros Sanguero, lord of the New Ferland Trading Company (NFTC), builds the Colonnium stronghold in Iyo territory. He quickly dominates regional trade.</p></div>
+      <div><p><strong>513</strong> Barros Sanguero, lord of the New Ferland Trading Company, builds the Colonnium stronghold in Iyo territory. He quickly dominates regional trade.</p></div>
+      <div><p></p></div>
+      <div><p><strong>530</strong> Dévoye’s son, Gustos II, builds a stone keep on the peninsula north of Tamun Dael, taking advantage of local unrest caused by a historic land dispute between the surrounding Rin, Tamu, Beru, and Haka-jouyen.</p></div>
+      <div><hr/></div>
+      <div><hr/></div>
+      <div><h3>533 First Elken War</h3></div>
+      <div><h3>533 First Elken War</h3></div>
+      <div><p>Sverbians and Aikoto ally to drive out the Ferish. Fighting spans the entire Aikoto coast. Some Rin and Iyo refuse to go to war and instead split off to form the nomadic Dona-jouyen.</p></div>
+      <div><p>Sanguero and Gustos II join forces, prompting Sverbians and Aikoto to ally against them. Some Rin and Iyo refuse to go to war and instead split off to form the nomadic Dona-jouyen.</p></div>
+      <div><p>The Sverbian-Aikoto alliance kills Sanguero and repels the NFTC. Iyo, Rin, and Sverbian settlers build a fort around the captured Colonnium to ensure Ferish soldiers cannot retake it. They name the fort Caladheå.</p></div>
+      <div><p>In the south, the Sverbian-Aikoto alliance kills Sanguero and captures the Colonnium. Iyo, Rin, and Sverbian settlers build a fort around it to ensure Ferish soldiers cannot retake it. They name the for Caladheå.</p></div>
+      <div><p></p></div>
+      <div><p>In the north, the Sverbian-Aikoto alliance kills Gustos II and captures his keep, which they name Caladsten. The Rin, Tamu, Beru, and Haka let the Sverbians occupy the disputed region on the condition they protect it from the Ferish. The Sverbians name the region Nordmur.</p></div>
+      <div><hr/></div>
+      <div><hr/></div>
+      <div><p></p></div>
+      <div><p><strong>535</strong> Imarein Rin, traumatized from the war, abandons his jouyen. He climbs Se Ji Ainu and swears devotion to the air spririt Ainu-Seru, known by itherans as Suriel.</p></div>
+      <div><p><strong>545</strong> Sverba founds the province of Eremur in southern Aikoto territory, declares Caladheå the capital, and establishes a local military. The Aikoto Confederacy refuses to recognize these actions.</p></div>
+      <div><p><strong>545</strong> Sverba founds the province of Eremur in southern Aikoto territory, declares Caladheå the capital, and establishes a local military. The Aikoto Confederacy refuses to recognize these actions.</p></div>
+      <div><p><strong>547</strong> Famine hits Ferland. Thousands of Ferish immigrants flee overseas to Eremur and nearby lands. Caladheå blooms into an international trading port. Construction begins on a new district, Ashtown, to house Ferish refugees.</p></div>
+      <div><p><strong>547</strong> Famine hits Ferland. Thousands of Ferish immigrants flee overseas to Eremur and nearby lands. Caladheå blooms into an international trading port. Construction begins on a new district, Ashtown, to house Ferish refugees.</p></div>
+      <div><hr/></div>
+      <div><hr/></div>
+      <div><h3>557–8 Second Elken War</h3></div>
+      <div><h3>557–8 Second Elken War</h3></div>
+      <div><p>A Ferish naval captain attempts to retake the Colonnium and claim land for new immigrants. The Sverbian-Aikoto alliance nearly defeats him — until his soldiers raze Bronnoi Ridge, the Aikoto district in Caladheå. The Rin abandon the city and return north.</p></div>
+      <div><p>Mardos Goyero, a Ferish naval captain, attempts to retake the Colonnium and claim land for new immigrants. The Sverbian-Aikoto alliance nearly defeats Goyero — until his soldiers raze Bronnoi Ridge, the Aikoto district in Caladheå. The Rin abandon the city and return north.</p></div>
+      <div><p>Sverba agrees to share control of Eremur with Ferland via an elected council. The Iyo surrender Bronnoi Ridge in exchange for land and housing in the Ashtown slums. Sverbian dissenters form the Rúonbattai, a radical militant group, and vow to drive out the Ferish.</p></div>
+      <div><p>Sverba agrees to share control of Eremur with Ferland via an elected council. The Iyo surrender Bronnoi Ridge in exchange for land and housing in the Ashtown slums. Sverbian dissenters form the Rúonbattai, a radical militant group, and vow to drive out the Ferish.</p></div>
+      <div><hr/></div>
+      <div><hr/></div>
+      <div><p></p></div>
+      <div><p><strong>559</strong> The war treaties prompt another immigration wave from Ferland. Wealthy settlers take over Bronnoi Ridge and the nearby town of Shawnaast, which later merges with Caladheå.</p></div>
+      <div><p></p></div>
+      <div><p><strong>563</strong> The Rúonbattai construct a hidden colony, Brånnheå.</p></div>
+      <div><hr/></div>
+      <div><hr/></div>
+      <div><h3>604–5 Third Elken War</h3></div>
+      <div><h3>604–5 Third Elken War</h3></div>
+      <div><p>An influenza epidemic ravages Eremur, killing thousands. Ferish rebels, angry about treaties from the previous war, take advantage of the weakened military and hold a coup. The Rúonbattai have a resurgence of support and retaliate against the Ferish rebels.</p></div>
+      <div><p>An influenza epidemic ravages Eremur, killing thousands. Ferish rebels, angry about treaties from the previous war, take advantage of the weakened military and stage a coup. The Rúonbattai have a resurgence of support and retaliate against the Ferish rebels.</p></div>
+      <div><p>The war-torn Rin and other northern jouyen refuse to come south and fight, breaking the Aikoto alliance. The Iyo temporarily abandon Caladheå. After great losses, the Council regains control of the city.</p></div>
+      <div><p>The war-torn Rin and other northern jouyen refuse to come south and fight, breaking the Aikoto alliance. The Iyo temporarily abandon Caladheå.</p></div>
+      <div><p></p></div>
+      <div><p>The Rúonbattai leader is killed in combat. Their new leader, Liet, retreats and ends the war. The Caladheå council regains control of the city.</p></div>
+      <div><hr/></div>
+      <div><hr/></div>
+      <div><p><strong>606</strong> Several Sverbian mages, accused of helping the Rúonbattai massacre Ferish immigrants, are murdered in Council custody. The mage city Ingdanrad cuts diplomatic ties to Eremur.</p></div>
+      <div><p><strong>606</strong> Several Sverbian mages, accused of helping the Rúonbattai massacre Ferish immigrants, are murdered in Council custody. The mage city Ingdanrad cuts diplomatic ties to Eremur.</p></div>
+      <div><p></p></div>
+      <div><p><strong>614</strong> Antoch Parr is promoted to captain of the 2nd Royal Eremur Cavalry. He recruits Jorumgard Tømasind and Tiernan Heilind, immigrant mercenaries from Sverba, to fight the Rúonbattai.</p></div>
+      <div><p><strong>618</strong> The Rúonbattai vanish with no explanation</p></div>
+      <div><p><strong>618</strong> The Rúonbattai vanish without a trace.</p></div>
+      <div><p><strong>619</strong> The Dona-jouyen return to Rin territory. The Rin declare war and eradicate the Dona. Soon after, devastating storms hit Rin territory, known as the Storm Year.</p></div>
+      <div><p></p></div>
+      <div><p></p></div>
+      <div><p><strong>622</strong> Rumours emerge that the Rúonbattai have reappeared in Nordmur. Captain Parr coordinates with Eremur’s navy and storms north in search of them, causing thousands of Sverbians and Aikoto to flee.</p></div>
+      <div><p><strong>623</strong> A military expedition from Caladheå is massacred in Dúnravn Pass. A few survivors and the Iyo claim the air spirit Suriel was responsible</p></div>
+      <div><p></p></div>
+      <div><p><strong>625</strong> A logging camp near Dúnravn Pass is massacred. Nearby townsfolk suspect Suriel’s return.</p></div>
+      <div><p></p></div>
+    </div>
+    <div class="wiper">
+      <div></div>
+    </div>
+    <div class="slider">
+      <input type="range" id="fraction" value="50" min="1" max="99"/>
+    </div>
+  </body>
+</html>
