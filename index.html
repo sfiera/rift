@@ -68,16 +68,18 @@
             var val = parseInt(fraction.value);
             var wiper = document.querySelector(".wiper div");
             var width = comparison.getBoundingClientRect().width;
+            var leftWidth = Math.floor(width * val / 100);
+            var rightWidth = width - leftWidth;
 
             wiper.style.left = (val - 50) + "%";
             document.querySelectorAll("#comparison > div:nth-child(odd)").forEach((el) => {
-              el.style.width = val + "%";
+              el.style.width = leftWidth + "px";
             });
             document.querySelectorAll("#comparison > div:nth-child(odd) > *").forEach((el) => {
               el.style.width = width;
             });
             document.querySelectorAll("#comparison > div:nth-child(even)").forEach((el) => {
-              el.style.width = (100 - val) + "%";
+              el.style.width = rightWidth + "px";
             });
             document.querySelectorAll("#comparison > div:nth-child(even) > *").forEach((el) => {
               el.style.width = width;
